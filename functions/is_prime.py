@@ -1,3 +1,5 @@
+import random
+
 def is_prime(n, k=5):
     """Prüft, ob eine Zahl n eine Primzahl ist (Miller-Rabin-Test)."""
     if n <= 1:

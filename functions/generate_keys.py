@@ -1,3 +1,8 @@
+from functions.find_coprime import find_coprime
+from functions.generate_large_prime import generate_large_prime
+from functions.modular_inverse import modular_inverse
+
+
 def generate_keys(bits=512):
     """Generiert ein Schlüsselpaar für RSA."""
     p = generate_large_prime(bits // 2)
