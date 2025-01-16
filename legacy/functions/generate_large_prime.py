@@ -1,5 +1,5 @@
 import random
-from functions.is_prime import is_prime
+from legacy.functions.is_prime import is_prime
 
 
 def generate_large_prime(bits=512):

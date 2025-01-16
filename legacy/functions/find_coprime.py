@@ -1,6 +1,6 @@
 import random
 
-from functions.greatest_common_divisor import greatest_common_divisor
+from legacy.functions.greatest_common_divisor import greatest_common_divisor
 
 
 def find_coprime(phi):

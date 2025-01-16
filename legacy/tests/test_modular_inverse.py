@@ -1,5 +1,5 @@
 import unittest
-from functions.modular_inverse import modular_inverse
+from legacy.functions.modular_inverse import modular_inverse
 
 
 class ModularInverseTests(unittest.TestCase):

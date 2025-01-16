@@ -1,6 +1,6 @@
-from functions.find_coprime import find_coprime
-from functions.generate_large_prime import generate_large_prime
-from functions.modular_inverse import modular_inverse
+from legacy.functions.find_coprime import find_coprime
+from legacy.functions.generate_large_prime import generate_large_prime
+from legacy.functions.modular_inverse import modular_inverse
 
 
 def generate_keys(bits=512):

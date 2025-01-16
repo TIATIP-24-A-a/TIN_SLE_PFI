@@ -1,5 +1,5 @@
 import unittest
-from functions.is_prime import is_prime
+from legacy.functions.is_prime import is_prime
 
 
 class IsPrimeTests(unittest.TestCase):

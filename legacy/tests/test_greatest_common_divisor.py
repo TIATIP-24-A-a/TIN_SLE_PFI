@@ -1,5 +1,5 @@
 import unittest
-from functions.greatest_common_divisor import greatest_common_divisor
+from legacy.functions.greatest_common_divisor import greatest_common_divisor
 
 
 class GreatestCommonDivisorTests(unittest.TestCase):

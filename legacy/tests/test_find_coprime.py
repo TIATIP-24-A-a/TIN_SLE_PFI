@@ -1,6 +1,6 @@
 import unittest
 
-from functions.find_coprime import find_coprime
+from legacy.functions.find_coprime import find_coprime
 
 
 class FindCoprimeTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
-from functions.generate_large_prime import generate_large_prime
-from functions.is_prime import is_prime
+from legacy.functions.generate_large_prime import generate_large_prime
+from legacy.functions.is_prime import is_prime
 
 
 class GenerateLargePrimeTests(unittest.TestCase):
