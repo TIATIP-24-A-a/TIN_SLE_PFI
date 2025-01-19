@@ -3,16 +3,15 @@
 # Project RSA
 We chose RSA encryption algorithm for this project. We defined the following requirements:
 
-- Generate a public and a private key pair using large prime numbers p and q.
-- Using sufficient large prime number to ensure a strong encryption.
-- Implement a random number generator to create a key.
-- Implement a test that to ensure that p and q are prime numbers.
+- Clear structure of the RSA-relevant functions
+- Encryption of plain text
+- Decryption of encrypted text
 
 # Creation of Algorithm
 
 ### 07.12.2024 Create Main RSA Functions
 
-For our next project we chose the RSA enryption algorithm.
+For our next project we chose the RSA encryption algorithm.
 In our first step, we did research to understand what RSA means and how it works.
 We created a test repository as our playground and tested several functions.
 
@@ -146,9 +145,36 @@ def find_coprime(phi):
 It appeared that the codes we created are too complicated for us to explain. As well we were not able to prove whether the code worked properly or not and if the numbers are correct.
 Therefore, we created a new code which is easier to understand and to explain.
 
-As a result, for our new code we decided to not generate prime numbers and only generate the private key. The rest is most likely the same in theory.
+As a result, for our new code we decided to not generate prime numbers and only generate the private key. The rest is most likely the same in theory and our public key is defined by `e = 121 `. 
+
+
 For the unittests we used the usual TDD procedure.
 
+````Python
+def main():
+    p = 223  # die Primzahlen p und q
+    q = 127
+    n = p * q
+    e = 121  # Der öffentliche Schlüssel
+    phi = (p - 1) * (q - 1)
+    d = get_private_key(e, phi)  # Erzeugt den privaten Schlüssel
+
+    klartext = "Mache die Projektarbeit fertig"
+    text = [ord(c) for c in klartext]  # Umwandlung des Klartexts in eine Liste von ASCII-Werten
+
+    rsa(text, n, e)  # Verschlüsseln
+    # Ausgabe des verschlüsselten Texts auf der Konsole:
+    print('Verschlüsselter Text:')
+    print(' '.join(map(str, text)))
+
+    rsa(text, n, d)  # Entschlüsseln
+    # Ausgabe des Dechiffrats:
+    print('Entschlüsselter Text:')
+    print(''.join(map(chr, text)))
+
+if __name__ == "__main__":
+    main()
+````
 
 ````Python
 def get_private_key(e, phi):
